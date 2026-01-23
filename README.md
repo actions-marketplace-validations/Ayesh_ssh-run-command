@@ -15,7 +15,7 @@ on:
 jobs:
   deploy:
     name: Deploy to staging server
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
 
     steps:
       - name: Deploy to staging server
