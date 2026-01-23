@@ -7,11 +7,10 @@ A simple GitHub Action to connect to a remote server over SSH, and run a command
 ```yaml
 name: Deploy to staging server
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
-
-  workflow_dispatch:
 
 jobs:
   deploy:
@@ -51,7 +50,7 @@ jobs:
 
 ## Outputs
 
-|Name| Description                           |
-|----|---------------------------------------|
+|Name| Description                                  |
+|----|----------------------------------------------|
 |`exit_code`| Exit code of the command run over SSH |
-|`output`| The output from command run over SSH  |
+|`output`| The output from command run over SSH     |
